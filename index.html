@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tareas de FirebaseMX</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <style>
+        .container {
+            margin-top: 30px;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+    </style>
+</head>
+<body onload="readTask()">
+    <nav class="navbar is-warning" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="https://bulma.io">
+            <p width="112" height="28"><strong>FirebaseMX</strong></p>
+          </a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="columns">
+            <div class="column" id="firstSection">
+                <div class="box">
+                    <form action="" id="form">
+                        <div class="field">
+                            <label class="label">Tarea</label>
+                            <div class="control">
+                                <input class="input" type="text" id="task" placeholder="Hacer de comer">
+                            </div>
+                        </div>
+                
+                        <div class="field">
+                            <label class="label">Descripción</label>
+                            <div class="control">
+                                <input class="input" type="text" id="description" placeholder="Descripción">
+                            </div>
+                        </div>
+                
+                        <div class="field is-grouped is-grouped-centered">
+                            <p class="control">
+                                <button type="submit" class="button is-primary is-rounded" id="submit">Guardar</button>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="column" id="cardSection"></div>
+        </div>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
